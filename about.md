@@ -8,5 +8,6 @@ description: >
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 hide_description: true
+---
 
-Page about the author
+

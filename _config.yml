@@ -17,7 +17,7 @@ baseurl: ''
 lang: en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title: Travel Journal
+title: "Chronicles"
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -26,8 +26,7 @@ description:           >
   **TravelJournal** is your presence on the web, featuring a blog, portfolio, and resume.
 
 # A shorter description for the sidebar.
-tagline:               >
-  "Best Travel Journal by a Mile".
+tagline: Traveller | Motorcyclist | Photographer
 
 # A list of keywords for your blog
 keywords: []
@@ -39,15 +38,13 @@ logo: /assets/icons/icon.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
-  name: Anirvan Mandal
+  name: Anirvan M
   email: anirvan.mandal@gmail.com
   # Used by `jekyll-seo-tag`:
   twitter: nx91
 
 # Add links to the sidebar.
-menu:
-  - title:             About
-    url:               /about/
+#menu:
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -78,7 +75,7 @@ accent_color:          rgb(255,102,0)
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(0,0,0)
+theme_color:           rgb(255,102,0)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>

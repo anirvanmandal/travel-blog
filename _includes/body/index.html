@@ -5,13 +5,8 @@
   script-selector="script:not([type^='math/tex'])"
   prefetch
 >
-  {% if page.cover %}
-    {% include body/sidebar.html %}
-    {% include body/main.html %}
-  {% else %}
-    {% include body/main.html %}
-    {% include body/sidebar.html %}
-  {% endif %}
+  {% include body/sidebar.html %}
+  {% include body/main.html %}
 </hy-push-state>
 
 {% include body/scripts.html %}

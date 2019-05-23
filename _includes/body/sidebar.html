@@ -13,12 +13,14 @@
 
         <div class="sidebar-sticky">
             <div class="sidebar-about">
-                <h2 class="h1"><a href="{{ '/' | relative_url }}">{{ site.short_title | default:site.title }}</a></h2>
+                <h2 class="h2 site-title"><a href="{{ '/' | relative_url }}">{{ site.short_title | default:site.title }}</a></h2>
+                <p class="site-author-title">
+                    by <a href="{{ '/about' | relative_url}}" class="site-author-title-link">a boring IT guy</a>
+                </p>
                 {% assign text = site.tagline | default:site.description %}
                 {% if text %}
-                <p class="{% if text.size > 100 %}fine{% endif %}">
-                    {{ text | markdownify | replace:'
-                <p>','' | replace:'</p>','' }}
+                <p class="{% if text.size > 100 %}fine{% endif %} author-tags">
+                    {{ text }}
                 </p>
                 {% endif %}
             </div>
