@@ -14,20 +14,20 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 table:not(.highlight) {
-  // <<< inline
+
   border-collapse: collapse;
   margin-bottom: 2rem;
   margin-left: -1rem;
-  // >>>
 
-  // <<< link
+
+
   display: block;
   vertical-align: top;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  // >>>
 
-  // <<< inline
+
+
   td, th {
     @extend .color-transition;
     padding: .25rem .5rem;
@@ -41,9 +41,9 @@ table:not(.highlight) {
       padding-right: 1rem;
     }
   }
-  // >>>
 
-  // <<< link
+
+
   thead {
     @extend .color-transition;
     background-color: var(--body-bg);
@@ -67,10 +67,10 @@ table:not(.highlight) {
     @extend .color-transition;
     background-color: var(--gray-bg);
   }
-  // >>>
+
 }
 
-// <<<<< LINK
+
 @media print {
   table:not(.highlight) {
     width: 100%!important;
@@ -178,4 +178,3 @@ table.flip-table {
     @include flip-table();
   }
 }
-// >>>>> LINK

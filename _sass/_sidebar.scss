@@ -20,7 +20,7 @@
   z-index: 2;
 
   @media screen and (min-width: $break-point-3) {
-    // <<< inline
+
     position: fixed;
     width: 21rem;
     top: 0;
@@ -32,24 +32,24 @@
       position: relative;
       width: 21rem;
     }
-    // >>>
+
   }
 
   @media screen and (min-width: $break-point-dynamic) {
     width: 25%;
   }
 
-  // <<< link
+
   @media screen {
     &.loaded {
       position: static;
     }
   }
-  // >>>
+
 }
 
 .sidebar {
-  // <<< inline
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -63,7 +63,7 @@
   @media screen and (min-width: $break-point-3) {
     min-height: 100vh;
   }
-  // >>>
+
 
   a {
     color: rgba(255, 255, 255, 0.6); // inline
@@ -72,7 +72,7 @@
 }
 
 .sidebar-bg {
-  // <<< inline
+
   position: absolute;
   top: 0;
   left: calc(50% - 50vw);
@@ -89,7 +89,7 @@
     right: 0;
     background: rgba(0, 0, 0, 0.05);
   }
-  // >>>
+
 
   &.sidebar-overlay::after {
     background: -moz-linear-gradient(top, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%); // link
@@ -98,7 +98,7 @@
   }
 }
 
-// <<<<< INLINE
+
 .sidebar-sticky {
   position: absolute;
   width: 100%;
@@ -152,12 +152,12 @@ a.sidebar-nav-item {
   line-height: 1.75;
   padding: .25rem;
 }
-// >>>>>
 
-// <<<<< LINK
+
+
 @media print {
   .sidebar {
     display: none;
   }
 }
-// >>>>>
+

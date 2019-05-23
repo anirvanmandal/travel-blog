@@ -18,7 +18,7 @@
   // -webkit-tap-highlight-color: transparent; // link
 }
 
-// <<<<< INLINE
+
 html,
 body {
   margin: 0;
@@ -57,9 +57,7 @@ a {
     width: calc(100% + 2rem);
   }
 }
-// >>>>> INLINE
 
-// <<<<< LINK
 @media print {
   a:not(.no-print-link)::after {
     content: " (" attr(href) ") ";
@@ -67,4 +65,3 @@ a {
     font-size: .83em;
   }
 }
-// >>>>> LINK

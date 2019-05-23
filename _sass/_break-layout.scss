@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// <<<<< LINK
+
 pre, table:not(.highlight), .katex-display, .break-layout  {
   $pad: $content-padding * 2;
 
@@ -52,4 +52,4 @@ pre, table:not(.highlight), .katex-display, .break-layout  {
     width: calc(100% + 50vw - #{$x});
   }
 }
-// >>>>>
+

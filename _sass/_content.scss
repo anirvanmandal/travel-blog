@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// <<<<< INLINE
+
 .content {
   padding:6rem 4rem;
   margin: 0;
@@ -31,11 +31,11 @@
     padding-left: calc(26% + 4rem);
   }
 }
-// >>>>>
-// <<< link
+
+
 .content {
   @media print {
     padding-bottom: 1rem;
   }
 }
-// >>>
+

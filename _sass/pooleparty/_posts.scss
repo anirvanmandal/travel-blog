@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-// <<<<< INLINE
+
 .page {
   margin-bottom: 3em;
 
@@ -36,17 +36,3 @@
   margin-bottom: 1rem;
   color: var(--text-muted);
 }
-// >>>>>
-// <<<<< LINK
-hr.dingbat {
-  border: 0;
-}
-
-hr.dingbat::after {
-  content: "\2756";
-  display: block;
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--menu-text);
-}
-// >>>>>
