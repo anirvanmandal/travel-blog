@@ -24,7 +24,7 @@
 
 .sidebar-container {
   width: 100%;
-  position: relative;
+  position: fixed;
   overflow: hidden;
   z-index: 2;
 
@@ -33,9 +33,7 @@
   }
 
   @media screen and (min-width: $break-point-dynamic) {
-    $r28: ($content-width-5 / 2) + $content-margin-5;
-
-    width: calc(50% - #{$r28});
+    width: 25%;
   }
 
   

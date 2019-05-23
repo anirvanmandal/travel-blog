@@ -22,7 +22,7 @@
   @media screen and (min-width: $break-point-3) {
     // <<< inline
     position: fixed;
-    width: $sidebar-width;
+    width: 21rem;
     top: 0;
     left: 0;
     bottom: 0;
@@ -30,15 +30,13 @@
 
     &.cover {
       position: relative;
-      width: $sidebar-width;
+      width: 21rem;
     }
     // >>>
   }
 
   @media screen and (min-width: $break-point-dynamic) {
-    $r28: ($content-width-5 / 2) + $content-margin-5;
-
-    width: calc(50% - #{$r28});
+    width: 25%;
   }
 
   // <<< link
@@ -111,7 +109,7 @@
   padding: 1.5rem;
 
   @media screen and (min-width: $break-point-3) {
-    max-width: $sidebar-width;
+    max-width: 100%;
     height: auto;
   }
 

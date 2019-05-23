@@ -24,14 +24,14 @@
 
 .sidebar-container {
   width: 100%;
-  position: relative;
+  position: fixed;
   overflow: hidden;
   z-index: 2;
 
   @media screen and (min-width: $break-point-3) {
     
     position: fixed;
-    width: $sidebar-width;
+    width: 21rem;
     top: 0;
     left: 0;
     bottom: 0;
@@ -39,15 +39,13 @@
 
     &.cover {
       position: relative;
-      width: $sidebar-width;
+      width: 21rem;
     }
     
   }
 
   @media screen and (min-width: $break-point-dynamic) {
-    $r28: ($content-width-5 / 2) + $content-margin-5;
-
-    width: calc(50% - #{$r28});
+    width: 25%;
   }
 
   
@@ -63,7 +61,7 @@
   //text-align: center;
   z-index: 2;
   min-height: 20vh;
-  transition: min-height 0.1s;
+  transition: min-height 0.3s;
 
   @media screen and (min-width: $break-point-3) {
     min-height: 100vh;
@@ -114,7 +112,7 @@
   padding: 1.5rem;
 
   @media screen and (min-width: $break-point-3) {
-    max-width: $sidebar-width;
+    max-width: 100%;
     height: auto;
   }
 
@@ -138,6 +136,7 @@
   list-style: none;
   padding-left: 0;
   display: none;
+  transition: display 0.9s;
   @media screen and (min-width: $break-point-3) {
     display: block;
   }
@@ -145,7 +144,7 @@
 
 .sidebar-social {
   display: none;
-  @media screen and (min-width: $break-point-3) {
+    @media screen and (min-width: $break-point-3) {
     display: block;
   }
 }
