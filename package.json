@@ -1,9 +1,9 @@
 {
-  "name": "hydejack",
-  "version": "8.4.0",
+  "name": "chronicles",
+  "version": "1.0.0",
   "description": "Jekyll based travel blog",
   "scripts": {
-    "clean": "rm -f assets/js/hydejack-*.js",
+    "clean": "rm -f assets/js/chronicles-*.js",
     "test": "exit 0",
     "format": "prettier --write \"_js/src/**/*.js\"",
     "build": "npm run build:js & wait",
@@ -51,12 +51,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/qwtel/hydejack.git"
+    "url": "https://github.com/anirvanmandal/travel-blog.git"
   },
   "bugs": {
-    "url": "https://github.com/qwtel/hydejack/issues"
+    "url": "https://github.com/anirvanmandal/travel-blog/issues"
   },
-  "homepage": "https://hydejack.com/",
+  "homepage": "https://chronicles.anirvanm.com/",
   "babel": {
     "presets": [
       "@babel/preset-env"
