@@ -13,12 +13,6 @@
 
         <div class="sidebar-sticky">
             <div class="sidebar-about">
-                {% if site.logo %}
-                <a class="no-hover" href="{{ '/' | relative_url }}" tabindex="-1">
-                    <img src="{{ site.logo | relative_url }}" class="avatar"
-                         alt="{{ site.short_title | default:site.title }}" data-ignore/>
-                </a>
-                {% endif %}
                 <h2 class="h1"><a href="{{ '/' | relative_url }}">{{ site.short_title | default:site.title }}</a></h2>
                 {% assign text = site.tagline | default:site.description %}
                 {% if text %}
@@ -38,6 +32,7 @@
             <div class="sidebar-social">
                 {% include components/social.html author=author %}
             </div>
+
         </div>
     </div>
 </header>

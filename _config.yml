@@ -9,7 +9,7 @@ url: https://travel.anirvanm.com
 # (with leading /, but without the < >).
 # Use the empty string '' otherwise.
 # For GitHub project sites, this is usually the name of the project,
-# e.g. `/hydejack`.
+# e.g. `/src`.
 baseurl: ''
 
 # Language of your content in 2-letter code, e.g.: en, de.
