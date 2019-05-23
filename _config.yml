@@ -58,7 +58,7 @@ menu:
 #     url:               /cookies-policy/
 
 # This text will appear in a `<small>` tag in the footer of every page.
-copyright:             © 2019. All rights reserved.
+copyright: © 2019. All rights reserved.
 
 # Format of the permalinks
 permalink:             /:categories/:year-:month-:day-:title/
@@ -73,24 +73,24 @@ paginate_path:         /page-:num/
 
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.jpg
-accent_color:          rgb(79,177,186)
+accent_color:          rgb(255,102,0)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(25,55,71)
+theme_color:           rgb(0,0,0)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
-google_fonts: Roboto+Slab:400|Noto+Sans:400,400i,700,700i
+google_fonts: Lato:700,700i,900,900i|Montserrat:400,400i,500,700
 
 # The text font. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font: Noto Sans, Helvetica, Arial, sans-serif
+font: Montserrat, Helvetica, Arial, sans-serif
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 # To change font-weight, see _sass/variables.scss
-font_heading: Roboto Slab, Helvetica, Arial, sans-serif
+font_heading: Lato, Helvetica, Arial, sans-serif
 
 defaults:
   # `jekyll-seo-tag` will mark collection outputs as `BlogPosting`,
@@ -176,10 +176,6 @@ hydejack:
   # When enabled, no user-related data will be stored until the user gives consent.
   # Note that this works in the PRO version of Hydejack.
   cookies_banner:      false
-
-  # Set to `true` if you would like to add a "Powered by Hydejack" link in the footer.
-  # Note that this works in the PRO version of Hydejack.
-  advertise:           false
 
   # Dark Mode for Hydejack
   # Note that this works in the PRO version of Hydejack.

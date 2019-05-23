@@ -22,47 +22,43 @@ $font-family-heading: {{ site.font_heading | default:"Roboto Slab, Helvetica, Ar
 $font-family:         {{ site.font         | default:"Noto Sans, Helvetica, Arial, sans-serif"   }};
 
 @import "variables";
-@import "my-variables";
 @import "mixins";
 
 @import "reboot-mod";
 
-@import "pooleparty/_base.pre.scss";
-@import "pooleparty/_type.pre.scss";
-@import "pooleparty/_table.pre.scss";
-@import "pooleparty/_footer.pre.scss";
-@import "pooleparty/_footnotes.pre.scss";
-@import "pooleparty/_code.pre.scss";
-@import "pooleparty/_posts.pre.scss";
-@import "pooleparty/_related.pre.scss";
-@import "pooleparty/_read-more.pre.scss";
-@import "pooleparty/_message.pre.scss";
-@import "pooleparty/_pagination.pre.scss";
+@import "pooleparty/_base.scss";
+@import "pooleparty/_type.scss";
+@import "pooleparty/_table.scss";
+@import "pooleparty/_footer.scss";
+@import "pooleparty/_footnotes.scss";
+@import "pooleparty/_code.scss";
+@import "pooleparty/_posts.scss";
+@import "pooleparty/_related.scss";
+@import "pooleparty/_read-more.scss";
+@import "pooleparty/_message.scss";
+@import "pooleparty/_pagination.scss";
 
-@import "hydejack/_base.pre.scss";
-@import "hydejack/_utilities.pre.scss";
-@import "hydejack/_links.pre.scss";
-@import "hydejack/_images.pre.scss";
-@import "hydejack/_sidebar.pre.scss";
-@import "hydejack/_social.pre.scss";
-@import "hydejack/_menu.pre.scss";
-@import "hydejack/_content.pre.scss";
-@import "hydejack/_avatar.pre.scss";
-@import "hydejack/_katex.pre.scss";
-@import "hydejack/_footer.pre.scss";
+@import "_base.scss";
+@import "_utilities.scss";
+@import "_links.scss";
+@import "_images.scss";
+@import "_sidebar.scss";
+@import "_social.scss";
+@import "_menu.scss";
+@import "_content.scss";
+@import "_avatar.scss";
+@import "_katex.scss";
+@import "_footer.scss";
 
 {% unless site.hydejack.no_mark_external or site.no_mark_external %}
-  @import "hydejack/_mark-external.pre.scss";
+  @import "_mark-external.scss";
 {% endunless %}
 {% unless site.hydejack.no_break_layout %}
-  @import "hydejack/_break-layout.pre.scss";
+  @import "_break-layout.scss";
 {% endunless %}
 
 @import "syntax";
 @import "spinner";
-
-@import "my-inline";
-@import "my-style";
 
 {% unless site.hydejack.no_google_fonts or site.no_google_fonts %}
   {% assign font = font | split:',' | shift | join:',' %}
