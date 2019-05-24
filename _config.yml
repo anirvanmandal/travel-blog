@@ -58,7 +58,7 @@ author:
 copyright: © 2019. All rights reserved.
 
 # Format of the permalinks
-permalink:             /:categories/:year-:month-:day-:title/
+permalink: /:categories/:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              5
@@ -69,7 +69,7 @@ paginate_path:         /page-:num/
 # ========================================================================================
 
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/img/sidebar-bg-bw.png
 accent_color:          rgb(255,102,0)
 
 # This is used for the `theme-color` meta tag,
