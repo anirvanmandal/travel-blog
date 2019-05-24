@@ -1,14 +1,18 @@
 <header id="_sidebar" class="sidebar-container" role="banner">
     <div class="sidebar">
         {% assign bg_color = page.theme_color | default:site.theme_color | default:color %}
-        {% capture bg_style %}background-color:{{bg_color}};{% if image != 'none' %}background-image:url({% include
+        {% capture bg_style %}{% if image != 'none' %}background-image:url({% include
         smart-url.txt url=image %}){% endif %}{% endcapture %}
         {% capture bg_class %}sidebar-bg {% if image != 'none' %}sidebar-overlay{% endif %}{% endcapture %}
         <div class="{{bg_class}}" style="{{bg_style}}"></div>
 
         <div class="sidebar-sticky">
             <div class="sidebar-about">
-                <h2 class="h2 site-title"><a href="{{ '/' | relative_url }}">{{ site.short_title | default:site.title }}</a></h2>
+                <div class="sidebar-title-container">
+                    <h2 class="h2 site-title">
+                        <a href="{{ '/' | relative_url }}">{{ site.short_title | default:site.title }}</a>
+                    </h2>
+                </div>
                 <p class="site-author-title">
                     by <a href="{{ '/about' | relative_url}}" class="site-author-title-link">a boring IT guy</a>
                 </p>
@@ -18,17 +22,16 @@
                     {{ text }}
                 </p>
                 {% endif %}
+                {% assign author = site.data.authors.first[1] | default:site.author %}
+
+                <div class="sidebar-social">
+                    {% include components/social.html author=author %}
+                </div>
             </div>
 
             <nav class="sidebar-nav heading" role="navigation">
                 {% include body/nav.html %}
             </nav>
-
-            {% assign author = site.data.authors.first[1] | default:site.author %}
-
-            <div class="sidebar-social">
-                {% include components/social.html author=author %}
-            </div>
 
         </div>
     </div>

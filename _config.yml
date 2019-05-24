@@ -244,6 +244,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-titles-from-headings
+  - jekyll-admin
 
 # SEO Tag
 # ---------------------------------------------------------------------------------------
@@ -308,3 +309,4 @@ compress_html:
 
 sass:
   style:               compressed
+  sass_dir: _sass

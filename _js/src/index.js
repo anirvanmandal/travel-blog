@@ -20,12 +20,39 @@ import ResizeObserver from "resize-observer-polyfill";
 import "web-animations-js";
 import smoothscroll from "smoothscroll-polyfill";
 import "../lib/request-idle-callback";
+import 'jquery/src/jquery'
+import "timeago.js/src/timeago";
 
 import "../lib/modernizr-custom";
 
 import "./images";
 import "./push-state";
 import "./katex";
+import timeagoFactory from "timeago.js";
+
+timeagoFactory().render($('time.timeago'));
 
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
 smoothscroll.polyfill();
+
+$(document).ready(() => {
+    window.onscroll = function() {myFunction()};
+
+    var header = $(".sidebar-title-container");
+
+    var sticky = header.offset().top;
+
+    function myFunction() {
+        if($(window).width() > 1024) {
+            return;
+        }
+        if (window.pageYOffset >= sticky) {
+            header.addClass("sticky");
+            $(".site-author-title, .author-tags").css("opacity", 1 - ((window.pageYOffset - sticky) / 50));
+        } else {
+            header.removeClass("sticky");
+            $(".site-author-title, .author-tags").css("opacity", 1 - ((window.pageYOffset - sticky) / 50));
+
+        }
+    }
+});

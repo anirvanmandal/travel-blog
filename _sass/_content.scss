@@ -39,3 +39,15 @@
   }
 }
 
+.post-title a {
+  color: #000000 !important;
+
+  &:hover {
+    color: rgb(255,102,0) !important;
+    text-decoration: none !important;
+  }
+}
+
+.post-title {
+  margin-bottom: 10px;
+}

@@ -47,7 +47,8 @@
     "rxjs": "^6.4.0",
     "smoothscroll-polyfill": "^0.4.3",
     "web-animations-js": "^2.3.1",
-    "jquery": "^3.4.0"
+    "jquery": "^3.4.0",
+    "timeago.js": "^3.0.0"
   },
   "repository": {
     "type": "git",
