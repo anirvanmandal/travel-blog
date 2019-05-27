@@ -48,7 +48,8 @@
     "smoothscroll-polyfill": "^0.4.3",
     "web-animations-js": "^2.3.1",
     "jquery": "^3.4.0",
-    "timeago.js": "^3.0.0"
+    "timeago.js": "^3.0.0",
+    "fontfaceobserver": "^2.1.0"
   },
   "repository": {
     "type": "git",

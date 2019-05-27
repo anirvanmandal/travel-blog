@@ -2111,6 +2111,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // import FontFaceObserver from "fontfaceobserver/fontfaceobserver";
 
 window.ResizeObserver = window.ResizeObserver || resize_observer_polyfill__WEBPACK_IMPORTED_MODULE_2__["default"];
 smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4___default.a.polyfill();

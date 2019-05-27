@@ -27,6 +27,7 @@ import "../lib/modernizr-custom";
 import "./images";
 import "./push-state";
 import timeagoFactory from "timeago.js";
+// import FontFaceObserver from "fontfaceobserver/fontfaceobserver";
 
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
 smoothscroll.polyfill();
