@@ -1,9 +1,11 @@
 ---
 title: Tryst With The Duchess
 image: /assets/img/blog/duke-200-cover-3.jpg
-date: 2019-05-26 17:00:00 +0530
+date: 2019-05-28 00:00:00 +0530
 tags: ktm duke motorcycles
 category: story
+
+excerpt_separator: <!--more-->
 ---
 
 For as long as I can remember, I have been fascinated by motorcycles. 
@@ -11,6 +13,8 @@ For as long as I can remember, I have been fascinated by motorcycles.
 As an 8-year-old kid, I owned a scale model of the Yamaha R1. I can't really point a finger on what I liked about it.
 I remember telling everyone that I will buy an R1 when I grew up. The people around me thought that this was a child's 
 fantasy and that I would grow out of it.
+
+<!--more-->
 
 When I turned 18, being an excited motorhead I got my motorcycle license immediately after my birthday.
 I was legally allowed to ride! Many people around me got their brand new TVS Apaches, R15s, FSz, and their Pulsars. 
