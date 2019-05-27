@@ -200,7 +200,7 @@ plugins:
 # -- or --
 webmaster_verifications:
   google: wJsq3PNiL3RfxRbO6MbHrDi-ssAOsWlkL-4ZEOCR92c
-#   bing:                <verification-id>
+  bing: E8F05B1CC734A3FD52F223FA321B8E53
 #   alexa:               <verification-id>
 #   yandex:              <verification-id>
 
