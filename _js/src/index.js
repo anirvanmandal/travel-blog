@@ -21,13 +21,11 @@ import "web-animations-js";
 import smoothscroll from "smoothscroll-polyfill";
 import "../lib/request-idle-callback";
 import 'jquery/src/jquery'
-import "timeago.js/src/timeago";
 
 import "../lib/modernizr-custom";
 
 import "./images";
 import "./push-state";
-import "./katex";
 import timeagoFactory from "timeago.js";
 
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;

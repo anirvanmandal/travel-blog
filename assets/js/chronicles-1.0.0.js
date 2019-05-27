@@ -2080,15 +2080,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lib_request_idle_callback__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_lib_request_idle_callback__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var jquery_src_jquery__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! jquery/src/jquery */ "./node_modules/jquery/src/jquery.js");
 /* harmony import */ var jquery_src_jquery__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(jquery_src_jquery__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var timeago_js_src_timeago__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! timeago.js/src/timeago */ "./node_modules/timeago.js/src/timeago.js");
-/* harmony import */ var timeago_js_src_timeago__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(timeago_js_src_timeago__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _lib_modernizr_custom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../lib/modernizr-custom */ "./_js/lib/modernizr-custom.js");
-/* harmony import */ var _lib_modernizr_custom__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_lib_modernizr_custom__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./images */ "./_js/src/images.js");
-/* harmony import */ var _push_state__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./push-state */ "./_js/src/push-state.js");
-/* harmony import */ var _katex__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./katex */ "./_js/src/katex.js");
-/* harmony import */ var timeago_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! timeago.js */ "./node_modules/timeago.js/dist/timeago.min.js");
-/* harmony import */ var timeago_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(timeago_js__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _lib_modernizr_custom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../lib/modernizr-custom */ "./_js/lib/modernizr-custom.js");
+/* harmony import */ var _lib_modernizr_custom__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_lib_modernizr_custom__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./images */ "./_js/src/images.js");
+/* harmony import */ var _push_state__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./push-state */ "./_js/src/push-state.js");
+/* harmony import */ var timeago_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! timeago.js */ "./node_modules/timeago.js/dist/timeago.min.js");
+/* harmony import */ var timeago_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(timeago_js__WEBPACK_IMPORTED_MODULE_10__);
 // # src / index.js
 // Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
 //
@@ -2115,12 +2112,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
 window.ResizeObserver = window.ResizeObserver || resize_observer_polyfill__WEBPACK_IMPORTED_MODULE_2__["default"];
 smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4___default.a.polyfill();
 $('hy-push-state').on('hy-push-state-load', function () {
-  timeago_js__WEBPACK_IMPORTED_MODULE_12___default()().render($('time.timeago'));
+  timeago_js__WEBPACK_IMPORTED_MODULE_10___default()().render($('time.timeago'));
 });
 $(document).ready(function () {
   window.onscroll = function () {
@@ -2153,81 +2148,6 @@ $(document).ready(function () {
 
 /***/ }),
 
-/***/ "./_js/src/katex.js":
-/*!**************************!*\
-  !*** ./_js/src/katex.js ***!
-  \**************************/
-/*! exports provided: upgradeMathBlocks */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "upgradeMathBlocks", function() { return upgradeMathBlocks; });
-/* harmony import */ var core_js_fn_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/fn/array/for-each */ "./node_modules/core-js/fn/array/for-each.js");
-/* harmony import */ var core_js_fn_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_fn_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common */ "./_js/src/common.js");
-// # src / katex.js
-// Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// This program is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU General Public License for more details.
-//
-// You should have received a copy of the GNU General Public License
-// along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
-var REQUIREMENTS = ["classlist", "eventlistener", "queryselector"];
-var featuresOk = Object(_common__WEBPACK_IMPORTED_MODULE_1__["hasFeatures"])(REQUIREMENTS);
-var loaded;
-
-function renderKatex(el) {
-  try {
-    var prev = el.previousElementSibling;
-
-    while (prev && !prev.classList.contains("MathJax_Preview")) {
-      prev = prev.previousElementSibling;
-    }
-
-    var tex = el.textContent.replace("% <![CDATA[", "").replace("%]]>", "");
-    el.outerHTML = window.katex.renderToString(tex, {
-      displayMode: el.type === "math/tex; mode=display"
-    });
-    if (prev) prev.parentNode.removeChild(prev);
-  } catch (e) {
-    if (true) console.error(e);
-  }
-}
-
-var promisify = function promisify(f, href) {
-  return new Promise(function (resolve) {
-    return f(href).addEventListener("load", resolve);
-  });
-};
-
-var upgradeMathBlocks = !featuresOk ? function () {} : function () {
-  var mathBlocks = document.querySelectorAll('script[type^="math/tex"]');
-
-  if (mathBlocks.length) {
-    if (!loaded) {
-      loaded = Promise.all([promisify(loadJS, document.getElementById("_hrefKatexJS").href), promisify(loadCSS, document.getElementById("_hrefKatexCSS").href), promisify(loadJS, document.getElementById("_hrefKatexCopyJS").href), promisify(loadCSS, document.getElementById("_hrefKatexCopyCSS").href)]);
-    }
-
-    loaded.then(function () {
-      Array.from(mathBlocks).forEach(renderKatex);
-    });
-  }
-};
-upgradeMathBlocks();
-
-/***/ }),
-
 /***/ "./_js/src/push-state.js":
 /*!*******************************!*\
   !*** ./_js/src/push-state.js ***!
@@ -2248,8 +2168,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
 /* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./common */ "./_js/src/common.js");
 /* harmony import */ var _cross_fader__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./cross-fader */ "./_js/src/cross-fader.js");
-/* harmony import */ var _katex__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./katex */ "./_js/src/katex.js");
-/* harmony import */ var _flip__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./flip */ "./_js/src/flip/index.js");
+/* harmony import */ var _flip__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./flip */ "./_js/src/flip/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
@@ -2298,7 +2217,6 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
 
  // Some of our own helper functions and classes.
-
 
 
 
@@ -2554,7 +2472,7 @@ if (!window._noPushState && Object(_common__WEBPACK_IMPORTED_MODULE_6__["hasFeat
     // We set it up here because FLIP animation may do extra work after a `fadeIn` and/or cleanup
     // work when an error occurs.
 
-    var flip$ = Object(_flip__WEBPACK_IMPORTED_MODULE_9__["setupFLIP"])(start$, ready$, Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["merge"])(fadeIn$, error$), {
+    var flip$ = Object(_flip__WEBPACK_IMPORTED_MODULE_8__["setupFLIP"])(start$, ready$, Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["merge"])(fadeIn$, error$), {
       animationMain: animationMain,
       settings: SETTINGS
     }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["share"])());
@@ -2594,14 +2512,7 @@ if (!window._noPushState && Object(_common__WEBPACK_IMPORTED_MODULE_6__["hasFeat
           curr = _ref15[1];
 
       return crossFader.fade(prev, curr);
-    })).subscribe(); // ### Upgrade math blocks
-    // Once the content is faded in, upgrade the math blocks with KaTeX.
-    // This can take a while and will trigger multiple repaints,
-    // so we don't want to start until after the animation.
-
-    fadeIn$.subscribe(function () {
-      return Object(_katex__WEBPACK_IMPORTED_MODULE_8__["upgradeMathBlocks"])();
-    }); // ### Show error page
+    })).subscribe(); // ### Show error page
     // In case of a network error, we don't want to show the browser's default offline page.
 
     error$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["switchMap"])(function (_ref16) {
@@ -44911,314 +44822,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       w = {};
     }
   }, d;
-});
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
-
-/***/ }),
-
-/***/ "./node_modules/timeago.js/src/timeago.js":
-/*!************************************************!*\
-  !*** ./node_modules/timeago.js/src/timeago.js ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(module) {function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-/**
- * Copyright (c) 2016 hustcc
- * License: MIT
- * Version: %%GULP_INJECT_VERSION%%
- * https://github.com/hustcc/timeago.js
-**/
-
-/* jshint expr: true */
-!function (root, factory) {
-  if (( false ? undefined : _typeof(module)) === 'object' && module.exports) {
-    module.exports = factory(root); // nodejs support
-
-    module.exports['default'] = module.exports; // es6 support
-  } else root.timeago = factory(root);
-}(typeof window !== 'undefined' ? window : this, function () {
-  var indexMapEn = 'second_minute_hour_day_week_month_year'.split('_'),
-      indexMapZh = '秒_分钟_小时_天_周_月_年'.split('_'),
-      // build-in locales: en & zh_CN
-  locales = {
-    'en': function en(number, index) {
-      if (index === 0) return ['just now', 'right now'];
-      var unit = indexMapEn[parseInt(index / 2)];
-      if (number > 1) unit += 's';
-      return [number + ' ' + unit + ' ago', 'in ' + number + ' ' + unit];
-    },
-    'zh_CN': function zh_CN(number, index) {
-      if (index === 0) return ['刚刚', '片刻后'];
-      var unit = indexMapZh[parseInt(index / 2)];
-      return [number + unit + '前', number + unit + '后'];
-    }
-  },
-      // second, minute, hour, day, week, month, year(365 days)
-  SEC_ARRAY = [60, 60, 24, 7, 365 / 7 / 12, 12],
-      SEC_ARRAY_LEN = 6,
-      // ATTR_DATETIME = 'datetime',
-  ATTR_DATA_TID = 'data-tid',
-      timers = {}; // real-time render timers
-  // format Date / string / timestamp to Date instance.
-
-  function toDate(input) {
-    if (input instanceof Date) return input;
-    if (!isNaN(input)) return new Date(toInt(input));
-    if (/^\d+$/.test(input)) return new Date(toInt(input));
-    input = (input || '').trim().replace(/\.\d+/, '') // remove milliseconds
-    .replace(/-/, '/').replace(/-/, '/').replace(/(\d)T(\d)/, '$1 $2').replace(/Z/, ' UTC') // 2017-2-5T3:57:52Z -> 2017-2-5 3:57:52UTC
-    .replace(/([\+\-]\d\d)\:?(\d\d)/, ' $1$2'); // -04:00 -> -0400
-
-    return new Date(input);
-  } // change f into int, remove decimal. Just for code compression
-
-
-  function toInt(f) {
-    return parseInt(f);
-  } // format the diff second to *** time ago, with setting locale
-
-
-  function formatDiff(diff, locale, defaultLocale) {
-    // if locale is not exist, use defaultLocale.
-    // if defaultLocale is not exist, use build-in `en`.
-    // be sure of no error when locale is not exist.
-    locale = locales[locale] ? locale : locales[defaultLocale] ? defaultLocale : 'en'; // if (! locales[locale]) locale = defaultLocale;
-
-    var i = 0,
-        agoin = diff < 0 ? 1 : 0,
-        // timein or timeago
-    total_sec = diff = Math.abs(diff);
-
-    for (; diff >= SEC_ARRAY[i] && i < SEC_ARRAY_LEN; i++) {
-      diff /= SEC_ARRAY[i];
-    }
-
-    diff = toInt(diff);
-    i *= 2;
-    if (diff > (i === 0 ? 9 : 1)) i += 1;
-    return locales[locale](diff, i, total_sec)[agoin].replace('%s', diff);
-  } // calculate the diff second between date to be formated an now date.
-
-
-  function diffSec(date, nowDate) {
-    nowDate = nowDate ? toDate(nowDate) : new Date();
-    return (nowDate - toDate(date)) / 1000;
-  }
-  /**
-   * nextInterval: calculate the next interval time.
-   * - diff: the diff sec between now and date to be formated.
-   *
-   * What's the meaning?
-   * diff = 61 then return 59
-   * diff = 3601 (an hour + 1 second), then return 3599
-   * make the interval with high performace.
-  **/
-
-
-  function nextInterval(diff) {
-    var rst = 1,
-        i = 0,
-        d = Math.abs(diff);
-
-    for (; diff >= SEC_ARRAY[i] && i < SEC_ARRAY_LEN; i++) {
-      diff /= SEC_ARRAY[i];
-      rst *= SEC_ARRAY[i];
-    } // return leftSec(d, rst);
-
-
-    d = d % rst;
-    d = d ? rst - d : rst;
-    return Math.ceil(d);
-  } // get the datetime attribute, `data-timeagp` / `datetime` are supported.
-
-
-  function getDateAttr(node) {
-    return getAttr(node, 'data-timeago') || getAttr(node, 'datetime');
-  } // get the node attribute, native DOM and jquery supported.
-
-
-  function getAttr(node, name) {
-    if (node.getAttribute) return node.getAttribute(name); // native
-
-    if (node.attr) return node.attr(name); // jquery
-  } // set the node attribute, native DOM and jquery supported.
-
-
-  function setTidAttr(node, val) {
-    if (node.setAttribute) return node.setAttribute(ATTR_DATA_TID, val); // native
-
-    if (node.attr) return node.attr(ATTR_DATA_TID, val); // jquery
-  } // get the timer id of node.
-  // remove the function, can save some bytes.
-  // function getTidFromNode(node) {
-  //   return getAttr(node, ATTR_DATA_TID);
-  // }
-
-  /**
-   * timeago: the function to get `timeago` instance.
-   * - nowDate: the relative date, default is new Date().
-   * - defaultLocale: the default locale, default is en. if your set it, then the `locale` parameter of format is not needed of you.
-   *
-   * How to use it?
-   * var timeagoLib = require('timeago.js');
-   * var timeago = timeagoLib(); // all use default.
-   * var timeago = timeagoLib('2016-09-10'); // the relative date is 2016-09-10, so the 2016-09-11 will be 1 day ago.
-   * var timeago = timeagoLib(null, 'zh_CN'); // set default locale is `zh_CN`.
-   * var timeago = timeagoLib('2016-09-10', 'zh_CN'); // the relative date is 2016-09-10, and locale is zh_CN, so the 2016-09-11 will be 1天前.
-  **/
-
-
-  function Timeago(nowDate, defaultLocale) {
-    this.nowDate = nowDate; // if do not set the defaultLocale, set it with `en`
-
-    this.defaultLocale = defaultLocale || 'en'; // use default build-in locale
-    // for dev test
-    // this.nextInterval = nextInterval;
-  } // what the timer will do
-
-
-  Timeago.prototype.doRender = function (node, date, locale) {
-    var diff = diffSec(date, this.nowDate),
-        self = this,
-        tid; // delete previously assigned timeout's id to node
-
-    node.innerHTML = formatDiff(diff, locale, this.defaultLocale); // waiting %s seconds, do the next render
-
-    timers[tid = setTimeout(function () {
-      self.doRender(node, date, locale);
-      delete timers[tid];
-    }, Math.min(nextInterval(diff) * 1000, 0x7FFFFFFF))] = 0; // there is no need to save node in object.
-    // set attribute date-tid
-
-    setTidAttr(node, tid);
-  };
-  /**
-   * format: format the date to *** time ago, with setting or default locale
-   * - date: the date / string / timestamp to be formated
-   * - locale: the formated string's locale name, e.g. en / zh_CN
-   *
-   * How to use it?
-   * var timeago = require('timeago.js')();
-   * timeago.format(new Date(), 'pl'); // Date instance
-   * timeago.format('2016-09-10', 'fr'); // formated date string
-   * timeago.format(1473473400269); // timestamp with ms
-  **/
-
-
-  Timeago.prototype.format = function (date, locale) {
-    return formatDiff(diffSec(date, this.nowDate), locale, this.defaultLocale);
-  };
-  /**
-   * render: render the DOM real-time.
-   * - nodes: which nodes will be rendered.
-   * - locale: the locale name used to format date.
-   *
-   * How to use it?
-   * var timeago = require('timeago.js')();
-   * // 1. javascript selector
-   * timeago.render(document.querySelectorAll('.need_to_be_rendered'));
-   * // 2. use jQuery selector
-   * timeago.render($('.need_to_be_rendered'), 'pl');
-   *
-   * Notice: please be sure the dom has attribute `datetime`.
-  **/
-
-
-  Timeago.prototype.render = function (nodes, locale) {
-    if (nodes.length === undefined) nodes = [nodes];
-
-    for (var i = 0, len = nodes.length; i < len; i++) {
-      this.doRender(nodes[i], getDateAttr(nodes[i]), locale); // render item
-    }
-  };
-  /**
-   * setLocale: set the default locale name.
-   *
-   * How to use it?
-   * var timeago = require('timeago.js')();
-   * timeago.setLocale('fr');
-  **/
-
-
-  Timeago.prototype.setLocale = function (locale) {
-    this.defaultLocale = locale;
-  };
-  /**
-   * timeago: the function to get `timeago` instance.
-   * - nowDate: the relative date, default is new Date().
-   * - defaultLocale: the default locale, default is en. if your set it, then the `locale` parameter of format is not needed of you.
-   *
-   * How to use it?
-   * var timeagoFactory = require('timeago.js');
-   * var timeago = timeagoFactory(); // all use default.
-   * var timeago = timeagoFactory('2016-09-10'); // the relative date is 2016-09-10, so the 2016-09-11 will be 1 day ago.
-   * var timeago = timeagoFactory(null, 'zh_CN'); // set default locale is `zh_CN`.
-   * var timeago = timeagoFactory('2016-09-10', 'zh_CN'); // the relative date is 2016-09-10, and locale is zh_CN, so the 2016-09-11 will be 1天前.
-   **/
-
-
-  function timeagoFactory(nowDate, defaultLocale) {
-    return new Timeago(nowDate, defaultLocale);
-  }
-  /**
-   * register: register a new language locale
-   * - locale: locale name, e.g. en / zh_CN, notice the standard.
-   * - localeFunc: the locale process function
-   *
-   * How to use it?
-   * var timeagoFactory = require('timeago.js');
-   *
-   * timeagoFactory.register('the locale name', the_locale_func);
-   * // or
-   * timeagoFactory.register('pl', require('timeago.js/locales/pl'));
-   **/
-
-
-  timeagoFactory.register = function (locale, localeFunc) {
-    locales[locale] = localeFunc;
-  };
-  /**
-   * cancel: cancels one or all the timers which are doing real-time render.
-   *
-   * How to use it?
-   * For canceling all the timers:
-   * var timeagoFactory = require('timeago.js');
-   * var timeago = timeagoFactory();
-   * timeago.render(document.querySelectorAll('.need_to_be_rendered'));
-   * timeagoFactory.cancel(); // will stop all the timers, stop render in real time.
-   *
-   * For canceling single timer on specific node:
-   * var timeagoFactory = require('timeago.js');
-   * var timeago = timeagoFactory();
-   * var nodes = document.querySelectorAll('.need_to_be_rendered');
-   * timeago.render(nodes);
-   * timeagoFactory.cancel(nodes[0]); // will clear a timer attached to the first node, stop render in real time.
-   **/
-
-
-  timeagoFactory.cancel = function (node) {
-    var tid; // assigning in if statement to save space
-
-    if (node) {
-      tid = getAttr(node, ATTR_DATA_TID); // get the timer of DOM node(native / jq).
-
-      if (tid) {
-        clearTimeout(tid);
-        delete timers[tid];
-      }
-    } else {
-      for (tid in timers) {
-        clearTimeout(tid);
-      }
-
-      timers = {};
-    }
-  };
-
-  return timeagoFactory;
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
 

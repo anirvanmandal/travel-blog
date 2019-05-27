@@ -54,7 +54,6 @@ import {
 // Some of our own helper functions and classes.
 import { animate, empty, hasFeatures, isFirefoxIOS, importTemplate } from "./common";
 import { CrossFader } from "./cross-fader";
-import { upgradeMathBlocks } from "./katex";
 import { setupFLIP } from "./flip";
 
 // ## Constants
@@ -357,12 +356,6 @@ if (!window._noPushState && hasFeatures(REQUIREMENTS) && !isFirefoxIOS) {
         mergeMap(([prev, curr]) => crossFader.fade(prev, curr))
       )
       .subscribe();
-
-    // ### Upgrade math blocks
-    // Once the content is faded in, upgrade the math blocks with KaTeX.
-    // This can take a while and will trigger multiple repaints,
-    // so we don't want to start until after the animation.
-    fadeIn$.subscribe(() => upgradeMathBlocks());
 
     // ### Show error page
     // In case of a network error, we don't want to show the browser's default offline page.
