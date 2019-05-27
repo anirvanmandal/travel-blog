@@ -35,6 +35,7 @@
         {% assign post_format = site.data.strings.date_formats.post | default:"%d %b %Y" %}
         <span class="tags-container">
           {% include components/tag-list.html tags=post.categories meta=site.featured_categories %}
+            <span class="tag-separator">{{ '  |  ' }}</span>
           {% include components/tag-list.html tags=post.tags meta=site.featured_tags %}
         </span>
         {% unless no_excerpt %}

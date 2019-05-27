@@ -40,14 +40,14 @@
 }
 
 .post-title a {
-  color: #000000 !important;
+  color: rgb(255, 102, 0) !important;
 
   &:hover {
-    color: rgb(255,102,0) !important;
     text-decoration: none !important;
   }
 }
 
 .post-title {
+  color: rgb(255, 102, 0);
   margin-bottom: 10px;
 }

@@ -44,6 +44,7 @@ export function setupFLIPTitle(start$, ready$, fadeIn$, { animationMain, setting
       page.appendChild(title);
 
       animationMain.style.position = "fixed";
+      animationMain.style.color = "rgb(255, 102, 0)";
       animationMain.style.opacity = 1;
 
       const first = anchor.getBoundingClientRect();

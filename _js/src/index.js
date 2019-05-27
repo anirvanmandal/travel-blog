@@ -30,20 +30,24 @@ import "./push-state";
 import "./katex";
 import timeagoFactory from "timeago.js";
 
-timeagoFactory().render($('time.timeago'));
-
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
 smoothscroll.polyfill();
 
+$('hy-push-state').on('hy-push-state-load', () => {
+    timeagoFactory().render($('time.timeago'));
+});
+
 $(document).ready(() => {
     window.onscroll = function() {myFunction()};
+    window.onresize = function() {myFunction()};
 
     var header = $(".sidebar-title-container");
-
     var sticky = header.offset().top;
 
     function myFunction() {
-        if($(window).width() > 1024) {
+        if($(window).width() >= 1024) {
+            $(".site-author-title, .author-tags").css("opacity", 1);
+            header.removeClass("sticky");
             return;
         }
         if (window.pageYOffset >= sticky) {

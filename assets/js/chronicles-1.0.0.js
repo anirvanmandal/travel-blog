@@ -1967,6 +1967,7 @@ function setupFLIPTitle(start$, ready$, fadeIn$, _ref) {
     _common__WEBPACK_IMPORTED_MODULE_3__["empty"].call(page);
     page.appendChild(title);
     animationMain.style.position = "fixed";
+    animationMain.style.color = "rgb(255, 102, 0)";
     animationMain.style.opacity = 1;
     var first = anchor.getBoundingClientRect();
     var last = title.getBoundingClientRect();
@@ -2116,11 +2117,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-timeago_js__WEBPACK_IMPORTED_MODULE_12___default()().render($('time.timeago'));
 window.ResizeObserver = window.ResizeObserver || resize_observer_polyfill__WEBPACK_IMPORTED_MODULE_2__["default"];
 smoothscroll_polyfill__WEBPACK_IMPORTED_MODULE_4___default.a.polyfill();
+$('hy-push-state').on('hy-push-state-load', function () {
+  timeago_js__WEBPACK_IMPORTED_MODULE_12___default()().render($('time.timeago'));
+});
 $(document).ready(function () {
   window.onscroll = function () {
+    myFunction();
+  };
+
+  window.onresize = function () {
     myFunction();
   };
 
@@ -2128,7 +2135,9 @@ $(document).ready(function () {
   var sticky = header.offset().top;
 
   function myFunction() {
-    if ($(window).width() > 1024) {
+    if ($(window).width() >= 1024) {
+      $(".site-author-title, .author-tags").css("opacity", 1);
+      header.removeClass("sticky");
       return;
     }
 
