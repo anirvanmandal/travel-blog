@@ -2,8 +2,7 @@
   <script>!function(w, d) {
     w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', '{{ site.google_analytics }}', 'auto');
-
-
+    
     const pushStateEl = d.getElementsByTagName('hy-push-state')[0];
     let timeoutId;
     pushStateEl.addEventListener('hy-push-state-load', function() {
@@ -12,13 +11,6 @@
         ga('set', 'page', w.location.pathname);
         ga('send', 'pageview');
       }, 500);
-    });
-
-    d.addEventListener('hy--cookies-ok', function () {
-      w.ga(function(tracker) {
-        w.ga("set", "anonymizeIp", undefined);
-        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
-      });
     });
 
     w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
