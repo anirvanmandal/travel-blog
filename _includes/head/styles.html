@@ -6,36 +6,15 @@
 {% assign font_heading = site.font_heading | default:"Roboto Slab, Helvetica, Arial, sans-serif" %}
 {% assign font         = site.font         | default:"Noto Sans, Helvetica, Arial, sans-serif" %}
 
-{% if site.hydejack.no_inline_css or jekyll.environment == 'development' %}
-  <link rel="stylesheet" href="{{ style_url | relative_url }}">
-  <link rel="stylesheet" href="{{ icons_url | relative_url }}">
-    <link rel="stylesheet" href="{{ fonts_url }}">
-    <noscript>
-      <style>
-        html { font-family: {{ font }}!important; }
-        h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: {{ font_heading }}!important; }
-      </style>
-    </noscript>
-{% else %}
-  <link rel="preload" as="style" href="{{ style_url | relative_url }}" id="_stylePreload">
-  <script>setRel('_stylePreload');</script>
-
-  <link rel="preload" as="style" href="{{ icons_url | relative_url }}" id="_iconsPreload">
-  <script>setRel('_iconsPreload');</script>
-
-  <link rel="preload" as="style" href="{{ fonts_url }}" id="_fontsPreload">
-  <script>setRel('_fontsPreload');</script>
-
+<link rel="stylesheet" href="{{ style_url | relative_url }}">
+<link rel="stylesheet" href="{{ icons_url | relative_url }}">
+  <link rel="stylesheet" href="{{ fonts_url }}">
   <noscript>
-    <link rel="stylesheet" href="{{ style_url | relative_url }}">
-    <link rel="stylesheet" href="{{ icons_url | relative_url }}">
-    <link rel="stylesheet" href="{{ fonts_url }}">
     <style>
       html { font-family: {{ font }}!important; }
       h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading { font-family: {{ font_heading }}!important; }
     </style>
   </noscript>
-{% endif %}
 {% unless site.hydejack.no_page_style %}
   {% include head/page-style.html %}
 {% endunless %}
