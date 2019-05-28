@@ -191,6 +191,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-titles-from-headings
   - jekyll-admin
+  - jekyll-avatar
 
 # SEO Tag
 # ---------------------------------------------------------------------------------------

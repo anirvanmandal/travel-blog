@@ -49,6 +49,7 @@ $font-family:         {{ site.font         | default:"Noto Sans, Helvetica, Aria
 @import "_avatar.scss";
 @import "_footer.scss";
 @import "_mark-external.scss";
+@import "_article.scss";
 
 {% unless site.hydejack.no_break_layout %}
   @import "_break-layout.scss";

@@ -14,31 +14,22 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 .avatar {
-
   width: 6.5rem;
   height: 6.5rem;
   border-radius: 100%;
   overflow: hidden;
-
-
-
   display: inline-block;
   position: relative;
   z-index: 1;
   img { width: 100%; }
 
-
-
   @media screen and (min-width: $break-point-5) {
     width: 7rem;
     height: 7rem;
   }
-
 }
-
 
 .content .avatar {
   float: right;
   margin-left: .5rem;
 }
-

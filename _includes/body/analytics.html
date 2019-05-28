@@ -1,26 +1,11 @@
 {% if site.google_analytics %}
   <script>!function(w, d) {
     w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-    if (navigator.CookiesOK) {
-      ga('create', '{{ site.google_analytics }}', 'auto');
-    } else if (d.cookie.indexOf("hy--cookies-ok=true") > -1) {
-      ga('create', '{{ site.google_analytics }}', {
-        'storage': 'none',
-        'clientId': localStorage ? localStorage.getItem('ga--client-id') : undefined
-      });
-    } else {
-      ga('create', '{{ site.google_analytics }}', {
-        'storage': 'none'
-      });
-      ga('set', 'forceSSL', true);
-      ga('set', 'anonymizeIp', true);
-    }
-
     ga('create', '{{ site.google_analytics }}', 'auto');
 
 
-    var pushStateEl = d.getElementsByTagName('hy-push-state')[0];
-    var timeoutId;
+    const pushStateEl = d.getElementsByTagName('hy-push-state')[0];
+    let timeoutId;
     pushStateEl.addEventListener('hy-push-state-load', function() {
       w.clearTimeout(timeoutId);
       timeoutId = w.setTimeout(function() {
