@@ -1,0 +1,22 @@
+.article {
+  min-height: calc(100vh - 272px);
+
+  .author-image {
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+    float: right;
+    margin: .5rem;
+
+    img {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $break-point-3) {
+      width: 25rem;
+    }
+  }
+}
