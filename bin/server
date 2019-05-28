@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-bundle exec jekyll serve --livereload --incremental
+JEKYLL_ENV=development bundle exec jekyll serve --livereload
