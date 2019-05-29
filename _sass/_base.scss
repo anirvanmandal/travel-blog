@@ -31,8 +31,7 @@ hy-push-state {
 @media screen {
   body::before {
     content: '';
-    width: 100%;
-    min-height: 40vh;
+    width: 0;
     background: var(--border-color);
     position: fixed;
     left: 0;

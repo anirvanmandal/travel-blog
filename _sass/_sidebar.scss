@@ -27,18 +27,15 @@
     left: 0;
     bottom: 0;
     margin-left: 0;
-
     &.cover {
       position: relative;
       width: 21rem;
     }
-
   }
 
   @media screen and (min-width: $break-point-dynamic) {
     width: 25%;
   }
-
 
   @media screen {
     &.loaded {
@@ -138,11 +135,11 @@
   width: 100vw;
   min-height: 500px;
   height: 100%;
-  background-color: transparent;
   background-position: center top;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: var(--border-color);
 
   @media screen and (min-width: $break-point-3) {
     background-position: center;
