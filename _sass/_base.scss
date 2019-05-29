@@ -31,7 +31,8 @@ hy-push-state {
 @media screen {
   body::before {
     content: '';
-    width: .5rem;
+    width: 100%;
+    min-height: 40vh;
     background: var(--border-color);
     position: fixed;
     left: 0;
@@ -40,12 +41,12 @@ hy-push-state {
   }
 
   @media (min-width: $break-point-3) {
-    body::before { width: $sidebar-width; }
+    body::before { width: 21rem; }
   }
 
   @media (min-width: $break-point-dynamic) {
     $r28: ($content-width-5 / 2) + $content-margin-5;
-    body::before { width: calc(50% - #{$r28}); }
+    body::before { width: 25%; }
   }
 }
 
