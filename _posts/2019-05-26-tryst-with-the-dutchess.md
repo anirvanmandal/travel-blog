@@ -37,8 +37,9 @@ ridden the R15 myself I knew that she didn't fit the bill specifically in the er
 bikes for traveling in India was the Royal Enfield classic 500 which I enjoyed riding myself. She managed to
 bring a smile to my face. Even though people swear by the bike, she has been known to have reliability issues in the past. But the
 most important thing why I rejected her was the weight. If I am not super comfortable riding her, I will never be able to 
-enjoy her. A Bajaj Pulsar was a common sight everywhere and I wanted to stand out in the crowd. Also riding him 
-([definitely male](https://www.youtube.com/watch?v=EJSwtXcLNco){:target="_blank"}) didn't evoke any emotion in me; ever.
+enjoy her (I'm still taking about the bike guys). A Bajaj Pulsar was a common sight everywhere and I wanted to stand out
+in the crowd. Also riding him ([definitely male](https://www.youtube.com/watch?v=EJSwtXcLNco){:target="_blank"}) didn't 
+evoke any emotion in me; ever.
 
 Now all that was left to be done was to extensively research all other available bikes in India. I began understanding
 numbers when it came to motorcycles, what does torque translate to? what difference does having an extra cylinder make?.

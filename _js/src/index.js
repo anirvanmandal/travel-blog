@@ -34,6 +34,12 @@ smoothscroll.polyfill();
 
 $('hy-push-state').on('hy-push-state-load', () => {
     timeagoFactory().render($('time.timeago'));
+
+    if (window.__sharethis__) {
+        window.__sharethis__.initialize();
+    }
+
+    FB.init({appId: '658059594608049', status: true, xfbml: true, version: 'v3.3'});
 });
 
 $(document).ready(() => {

@@ -20,7 +20,8 @@ compress_header: true
 
 {% include components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image %}
 
-<div class="sharethis-inline-reaction-buttons"></div>
+<div class="sharethis-inline-reaction-buttons reactions-container"></div>
+<div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%"></div>
 
 {% assign addons = page.addons | default:site.hydejack.post_addons %}
 {% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
