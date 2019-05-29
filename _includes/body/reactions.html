@@ -1,3 +1,6 @@
 {% if site.sharethis_code %}
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property={{ site.sharethis_code }}&product=inline-reaction-buttons' async='async'></script>
+<script>!function(w, d) {
+    w.loadJSDeferred(d.getElementById("_hrefShareThis").href);
+}(window, document);
+</script>
 {% endif %}
