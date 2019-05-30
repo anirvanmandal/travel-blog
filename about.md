@@ -12,7 +12,7 @@ hide_description: true
 <!--author-->
 Hello World! I am Anirvan.
 
-Born in Hyderabad, I currently live in _namma_ Bengaluru where I work as a remote consultant.
+Born in Hyderabad, I currently live in _namma_ Bengaluru where I work as a remote software consultant.
 
 I have been obsessed with motorcycles since childhood. I currently ride Duchess(KTM Duke 200) & Nightfury (Triumph Street Triple 675).
 While I lived in Ireland from 2016-18, I owned a BMW S1000R. My current dream bike is the BMW F 850 GS using which I want 
@@ -24,3 +24,5 @@ half dome hike in Yosemite national park.
 
 In the near future, I want to continue traveling across India and visit the neighbouring countries in South East Asia and
 Central Asia. 
+
+This blog contains my experiences on travel, motorcycles and life.
