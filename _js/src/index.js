@@ -25,7 +25,6 @@ import 'jquery/src/jquery'
 import "../lib/modernizr-custom";
 
 import "./images";
-import "./push-state";
 import timeagoFactory from "timeago.js";
 
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
