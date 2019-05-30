@@ -1,12 +1,14 @@
 <hy-push-state
-  replace-ids="_main"
+  replace-ids="push-state__container"
   link-selector="a[href]:not([href*='/assets/']):not(.external):not(.no-push-state)"
   duration="250"
   script-selector="script:not([type^='math/tex'])"
   prefetch
 >
-  {% include body/sidebar.html %}
-  {% include body/main.html %}
+  <div id="push-state__container">
+    {% include body/sidebar.html %}
+    {% include body/main.html %}
+  </div>
 </hy-push-state>
 
 {% include body/scripts.html %}
