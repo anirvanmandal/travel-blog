@@ -1,23 +1,23 @@
 {% assign tags = include.tags %}
 {% assign meta = include.meta %}
 
-{% assign content = '' %}
+{% assign tags_list = '' %}
 
 {% if tags.size > 0 %}
-  {% assign content = start_with %}
+  {% assign tags_list = start_with %}
   {% for tag_slug in tags %}
 {% capture iter_separator %}{% unless forloop.last %}<span class="tag-separator">{{ '  |  ' }}</span>{% endunless %}{% endcapture %}
 
     {% assign tag = meta | where: "slug", tag_slug | first %}
 
     {% if tag %}
-      {% capture content_temp %}{{ content }}<a href="{{ tag.url | relative_url }}" class="flip-title">{{ tag.title }}</a>{{ iter_separator }}{% endcapture %}
+      {% capture content_temp %}{{ tags_list }}<a href="{{ tag.url | relative_url }}" class="flip-title">{{ tag.title }}</a>{{ iter_separator }}{% endcapture %}
     {% else %}
-      {% capture content_temp %}{{ content }}<span>{{ tag_slug }}</span>{{ iter_separator }}{% endcapture %}
+      {% capture content_temp %}{{ tags_list }}<span>{{ tag_slug }}</span>{{ iter_separator }}{% endcapture %}
     {% endif %}
 
-    {% assign content = content_temp %}
+    {% assign tags_list = content_temp %}
   {% endfor %}
 {% endif %}
 
-{{ content }}
+{{ content_temp }}

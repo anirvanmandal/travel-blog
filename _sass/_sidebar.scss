@@ -20,6 +20,31 @@
   z-index: 2;
   transition: width .2s linear;
 
+  &:not(.expanded-sidebar) {
+    @media screen and (max-width: $break-point-3) {
+      min-height: auto;
+      .sidebar-sticky {
+        height: 0;
+      }
+
+      .sidebar {
+        min-height: auto;
+      }
+
+      .site-author-title {
+        display: none;
+      }
+
+      .author-tags {
+        display: none;
+        padding: 0;
+      }
+      .sidebar-bg {
+        display: none;
+      }
+    }
+  }
+
   @media screen and (min-width: $break-point-3) {
     position: fixed;
     width: 21rem;
@@ -64,28 +89,7 @@
     color: rgba(255, 255, 255, 1);
   }
 
-  &.compress {
-    min-height: auto;
-    .sidebar-sticky {
-      height: 0;
-    }
-
-    .site-author-title {
-      display: none;
-    }
-
-    .author-tags {
-      display: none;
-      padding: 0;
-    }
-    .sidebar-bg {
-      display: none;
-    }
-  }
-
-
-
-  &.compress .sidebar-title-container, .sidebar-title-container {
+  .sidebar-title-container {
     &.sticky {
       background-image: url("/assets/img/sidebar-bg-bw.png");
       background-position: center top;

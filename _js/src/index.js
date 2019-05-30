@@ -27,12 +27,11 @@ import "../lib/modernizr-custom";
 import "./images";
 import "./push-state";
 import timeagoFactory from "timeago.js";
-// import FontFaceObserver from "fontfaceobserver/fontfaceobserver";
 
 window.ResizeObserver = window.ResizeObserver || ResizeObserver;
 smoothscroll.polyfill();
 
-$('hy-push-state').on('hy-push-state-load', () => {
+$(document).ready(() => {
     timeagoFactory().render($('time.timeago'));
 
     if (window.__sharethis__) {
@@ -40,14 +39,31 @@ $('hy-push-state').on('hy-push-state-load', () => {
     }
 
     FB.init({appId: '658059594608049', status: true, xfbml: true, version: 'v3.3'});
-});
 
-$(document).ready(() => {
-    window.onscroll = function() {myFunction()};
-    window.onresize = function() {myFunction()};
+    let header = $(".sidebar-title-container");
 
-    var header = $(".sidebar-title-container");
-    var sticky = header.offset().top;
+    if ($('.sidebar-container').hasClass('collapsed-header')) {
+        header.addClass('sticky');
+    } else {
+        window.onscroll = function() {
+            myFunction();
+        };
+        window.onresize = function() {
+            computeOffset();
+            myFunction();
+        };
+
+        computeOffset();
+        myFunction();
+    }
+
+    function computeOffset() {
+        if (header.hasClass('sticky')) {
+            return;
+        }
+
+        window.sticky = header.offset().top
+    }
 
     function myFunction() {
         if($(window).width() >= 1024) {
@@ -55,7 +71,12 @@ $(document).ready(() => {
             header.removeClass("sticky");
             return;
         }
-        if (window.pageYOffset >= sticky) {
+
+        if(!window.sticky) {
+            return;
+        }
+
+        if (window.pageYOffset >= window.sticky) {
             header.addClass("sticky");
             $(".site-author-title, .author-tags").css("opacity", 1 - ((window.pageYOffset - sticky) / 50));
         } else {

@@ -1,10 +1,12 @@
-<header id="_sidebar" class="sidebar-container" role="banner">
+{% capture sidebar_class %}{% if page.expand_header == true %}expanded-sidebar{% else %}collapsed-sidebar{% endif %}{% endcapture %}
+
+<header id="_sidebar" class="sidebar-container {{sidebar_class}}" role="banner">
     <div class="sidebar">
         {% assign bg_color = page.theme_color | default:site.theme_color | default:color %}
         {% capture bg_style %}{% if image != 'none' %}background-image:url({% include
         smart-url.txt url=image %}){% endif %}{% endcapture %}
         {% capture bg_class %}sidebar-bg {% if image != 'none' %}sidebar-overlay{% endif %}{% endcapture %}
-        <div class="{{bg_class}}" style="{{bg_style}}"></div>
+        <div class="{{bg_class}} " style="{{bg_style}}"></div>
 
         <div class="sidebar-sticky">
             <div class="sidebar-about">
@@ -14,7 +16,7 @@
                     </h2>
                 </div>
                 <p class="site-author-title">
-                    by <a href="{{ '/about' | relative_url}}" class="site-author-title-link">a boring IT guy</a>
+                    by <a href="{{ '/about' | relative_url}}" class="site-author-title-link no-push-state no-mark">a boring IT guy</a>
                 </p>
                 {% assign text = site.tagline | default:site.description %}
                 {% if text %}
