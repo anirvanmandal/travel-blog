@@ -2,7 +2,7 @@
   min-height: calc(100vh - 272px);
 
   .author-image {
-    width: 100%;
+    width: 16rem;
     overflow: hidden;
     display: inline-block;
     position: relative;
@@ -20,7 +20,7 @@
     @media screen and (min-width: $break-point-3) {
       margin-top: 0;
       margin-left: 1rem;
-      width: 25rem;
+      width: 18rem;
     }
   }
 }

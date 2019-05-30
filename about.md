@@ -9,9 +9,8 @@ description: >
 
 hide_description: true
 ---
-
-Hello World! I am Anirvan.
 <!--author-->
+Hello World! I am Anirvan.
 
 Born in Hyderabad, I currently live in _namma_ Bengaluru where I work as a remote consultant.
 
