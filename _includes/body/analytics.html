@@ -2,16 +2,8 @@
   <script>!function(w, d) {
     w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', '{{ site.google_analytics }}', 'auto');
-    
-    const pushStateEl = d.getElementsByTagName('hy-push-state')[0];
-    let timeoutId;
-    pushStateEl.addEventListener('hy-push-state-load', function() {
-      w.clearTimeout(timeoutId);
-      timeoutId = w.setTimeout(function() {
-        ga('set', 'page', w.location.pathname);
-        ga('send', 'pageview');
-      }, 500);
-    });
+    ga('set', 'page', w.location.pathname);
+    ga('send', 'pageview');
 
     w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
   }(window, document);</script>

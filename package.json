@@ -41,7 +41,6 @@
     "core-js": "^2.6.5",
     "elem-dataset": "^1.1.1",
     "hy-img": "^1.0.0-hydejack.11",
-    "hy-push-state": "^1.0.0-pre.25",
     "intersection-observer": "^0.5.1",
     "resize-observer-polyfill": "^1.5.1",
     "rxjs": "^6.4.0",

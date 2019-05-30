@@ -21,13 +21,6 @@ body {
   overflow-x: hidden;
 }
 
-hy-push-state {
-  display: block;
-  overflow: hidden;
-}
-
-
-
 @media screen {
   body::before {
     content: '';
