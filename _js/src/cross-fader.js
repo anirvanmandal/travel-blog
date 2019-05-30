@@ -40,7 +40,7 @@ function isExternal({ protocol, host }, location = window.location) {
 
 export class CrossFader {
   constructor(fadeDuration) {
-    const main = document.getElementById("_main");
+    const main = document.getElementById("push-state__container");
     const pageStyle = document.getElementById("_pageStyle");
     const styleSheet =
       Array.from(document.styleSheets).find(ss => ss.ownerNode === pageStyle) || {};

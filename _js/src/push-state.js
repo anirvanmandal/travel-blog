@@ -231,7 +231,7 @@ if (!window._noPushState && hasFeatures(REQUIREMENTS) && !isFirefoxIOS) {
     // First we get a hold fo the current content.
     // TODO: Change hy-push-state to provide this as part of the event?
     const fadeOut$ = start$.pipe(
-      map(context => Object.assign(context, { main: document.getElementById("_main") })),
+      map(context => Object.assign(context, { main: document.getElementById("push-state__container") })),
 
       tap(({ main }) => (main.style.pointerEvents = "none")),
 
@@ -253,7 +253,7 @@ if (!window._noPushState && hasFeatures(REQUIREMENTS) && !isFirefoxIOS) {
     // and it is parsed as a document fragment, but before we add it to the DOM.
     // This is were we can make some changes to the content without triggering repaints.
     ready$
-      .pipe(startWith({ replaceEls: [document.getElementById("_main")] }))
+      .pipe(startWith({ replaceEls: [document.getElementById("push-state__container")] }))
       .subscribe(({ replaceEls: [main] }) => {
         main.classList.remove("fade-in");
 
@@ -279,7 +279,7 @@ if (!window._noPushState && hasFeatures(REQUIREMENTS) && !isFirefoxIOS) {
     after$
       .pipe(
         startWith({
-          replaceEls: [document.getElementById("_main")],
+          replaceEls: [document.getElementById("push-state__container")],
           documentFragment: document,
         })
       )
@@ -364,7 +364,7 @@ if (!window._noPushState && hasFeatures(REQUIREMENTS) && !isFirefoxIOS) {
         switchMap(({ url }) => {
           loading.style.display = "none";
 
-          const main = document.getElementById("_main");
+          const main = document.getElementById("push-state__container");
           main.style.pointerEvents = "";
           empty.call(animationMain.querySelector(".page"));
           empty.call(main);
